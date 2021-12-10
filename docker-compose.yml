@@ -1,0 +1,13 @@
+version: '3'
+services:
+ tomcat:
+   image: registry.cn-hangzhou.aliyuncs.com/fengxuan/log4j_vuln 
+   environment: 
+     - JAVA_HOME=/usr/local/jdk1.8.0_144/
+     - PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
+     - CLASSPATH=.:/lib:/jre/lib
+   command: /bin/bash /home/apache-tomcat-8.5.45/bin/startup.sh 
+   stdin_open: true
+   tty: true
+   ports:
+    - "8080:8080"
