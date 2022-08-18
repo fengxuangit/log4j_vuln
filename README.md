@@ -107,3 +107,8 @@ docker exec -it log4j_vuln_container /bin/bash
 
 
 
+
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
